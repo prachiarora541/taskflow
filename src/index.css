@@ -1,0 +1,17 @@
+html {
+     min-width: 320px;
+     background: #f6f7f4;
+}
+
+body {
+     min-width: 320px;
+}
+
+#root {
+     min-height: 100vh;
+}
+
+:focus-visible {
+     outline: 3px solid #b5d66c;
+     outline-offset: 3px;
+}
