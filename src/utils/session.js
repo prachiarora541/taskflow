@@ -54,7 +54,3 @@ export function clearSession() {
      localStorage.removeItem("currentUser");
 }
 
-export function getSessionTimeRemaining() {
-     const session = getActiveSession();
-     return session ? Math.max(0, session.expiresAt - Date.now()) : 0;
-}

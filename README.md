@@ -1,6 +1,6 @@
 # TaskFlow
 
-TaskFlow is a React productivity dashboard for turning a list of tasks into a visible workflow: **To do -> In progress -> Completed**. It is a frontend-only BTech project demonstrating React fundamentals, hooks, routing, localStorage, fetch, CSS Grid/Flexbox, and HTML5 drag and drop.
+TaskFlow is a React productivity dashboard for turning a list of tasks into a visible workflow: **To do -> In progress -> Completed**. It is a frontend-only BTech project demonstrating React fundamentals, hooks, routing, localStorage, CSS Grid/Flexbox, and HTML5 drag and drop.
 
 ## Features
 
@@ -17,7 +17,7 @@ TaskFlow is a React productivity dashboard for turning a list of tasks into a vi
 
 ## Technologies
 
-React, Vite, React Router, Lucide React, JavaScript ES6+, CSS, HTML5 Drag and Drop, localStorage, Fetch API.
+React, Vite, React Router, Lucide React, JavaScript ES6+, CSS, HTML5 Drag and Drop, and localStorage.
 
 ## Installation
 
@@ -40,7 +40,6 @@ npm run preview
 - `src/App.jsx` - routes, lifted task state, reusable UI components, and workflow logic
 - `src/App.css` - responsive design system, themes, cards, animations, and layout
 - `src/hooks/useLocalStorage.js` - reusable JSON persistence hook
-- `src/data/tasks.json` - sample tasks loaded through `fetch` and `async` behavior
 - `src/index.css` - document-level reset and focus styles
 
 ## GitHub
@@ -82,7 +81,7 @@ Functional requirements include login, task creation, editing, deletion, movemen
 The user interacts with pages through React Router. Dashboard owns task state and lifts it above TaskColumn and TaskCard. Controlled form inputs send task data upward. Derived statistics and filtered lists are calculated with `useMemo`. `useLocalStorage` serializes state with `JSON.stringify` and restores it with `JSON.parse`.
 
 ### React concepts used
-JSX, components, props, state, conditional rendering, list rendering, events, `useState`, `useEffect`, `useRef`, `useMemo`, `useCallback`, custom hooks, lifting state, controlled components, modules, and dynamic routes. `fetch` loads the starter JSON; `async`/`await` concepts are represented by the promise-based data loading flow.
+JSX, components, props, state, conditional rendering, list rendering, events, `useState`, `useEffect`, `useRef`, `useMemo`, `useCallback`, custom hooks, lifting state, controlled components, modules, and dynamic routes.
 
 ### Future scope and conclusion
 Future versions could add a real backend, user accounts, calendar sync, reminders, collaboration, and cloud synchronization. TaskFlow demonstrates that a student-focused tool can remain understandable while still offering a realistic workflow and polished interaction model.
@@ -104,21 +103,18 @@ Future versions could add a real backend, user accounts, calendar sync, reminder
 13. **What are controlled components?** Form fields whose values are controlled by React state.
 14. **What is localStorage?** Browser storage that persists string values across refreshes.
 15. **What is JSON?** A text format used to represent structured data.
-16. **What is fetch?** A browser API for requesting resources.
-17. **What is async/await?** Syntax that makes promise-based asynchronous code easier to read.
-18. **What is React Router?** A library that maps URLs to React views without full page reloads.
-19. **What is a dynamic route?** A route with a variable segment, such as `/tasks/:id`.
-20. **What is a protected route?** A route that checks login state before rendering.
-21. **How does drag and drop work?** The card writes its id to `dataTransfer`; the destination reads it and updates status.
-22. **How does filtering work?** `filter()` creates a new array matching search and selected criteria.
-23. **How does sorting work?** A copied derived array uses `sort()` based on date or priority.
-24. **Why use Grid and Flexbox?** Grid handles two-dimensional page layouts; Flexbox aligns items in one direction.
-25. **How are tasks stored?** React state is serialized to localStorage and restored when the app loads.
-26. **Why should state not be mutated?** New arrays and objects let React detect changes predictably.
-27. **What is responsive design?** Layout rules adapt to screen size using flexible units and media queries.
-28. **What is a promise?** An object representing the future result of asynchronous work.
-29. **What is event handling?** React functions respond to user actions such as clicks, input, drag, and drop.
-30. **What is frontend authentication here?** A demo boolean in localStorage, not secure server authentication.
+16. **What is React Router?** A library that maps URLs to React views without full page reloads.
+17. **What is a dynamic route?** A route with a variable segment, such as `/tasks/:id`.
+18. **What is a protected route?** A route that checks login state before rendering.
+19. **How does drag and drop work?** The card writes its id to `dataTransfer`; the destination reads it and updates status.
+20. **How does filtering work?** `filter()` creates a new array matching search and selected criteria.
+21. **How does sorting work?** A copied derived array uses `sort()` based on date or priority.
+22. **Why use Grid and Flexbox?** Grid handles two-dimensional page layouts; Flexbox aligns items in one direction.
+23. **How are tasks stored?** React state is serialized to localStorage and restored when the app loads.
+24. **Why should state not be mutated?** New arrays and objects let React detect changes predictably.
+25. **What is responsive design?** Layout rules adapt to screen size using flexible units and media queries.
+26. **What is event handling?** React functions respond to user actions such as clicks, input, drag, and drop.
+27. **What is frontend authentication here?** A demo boolean in localStorage, not secure server authentication.
 
 ## Two-minute explanation
 
@@ -126,4 +122,4 @@ TaskFlow is my React-based task workflow application for managing study, project
 
 The application includes a dashboard, search, combined filters, sorting, priorities, categories, tags, due dates, task details, analytics, settings, dark mode, and a responsive layout. I used React components such as TaskCard and TaskColumn so the interface is reusable. The Dashboard owns the shared task state, which demonstrates lifting state, while the add and edit form uses controlled inputs. I used useEffect for loading and saving, useMemo for derived statistics and filtering, useCallback for stable task handlers, and useRef for form focus.
 
-Tasks are loaded from a JSON file with fetch and are saved in localStorage so they remain after refresh. React Router handles the pages and the protected dashboard route checks demo login state. I used CSS variables, Grid, Flexbox, media queries, transitions, and keyframe animations to make the interface responsive and polished. In the future I would add a backend, real authentication, reminders, calendar integration, and collaboration.
+Tasks start in an empty workspace and are saved in localStorage so they remain after refresh. React Router handles the pages and the protected dashboard route checks demo login state. I used CSS variables, Grid, Flexbox, media queries, transitions, and keyframe animations to make the interface responsive and polished. In the future I would add a backend, real authentication, reminders, calendar integration, and collaboration.
