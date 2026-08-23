@@ -54,6 +54,14 @@ const columns = [
      { id: "progress", label: "In progress", icon: Clock3, tone: "yellow" },
      { id: "done", label: "Completed", icon: CheckCircle2, tone: "green" },
 ];
+const legacyTaskIds = new Set([
+     "task-1",
+     "task-2",
+     "task-3",
+     "task-4",
+     "task-5",
+     "task-6",
+]);
 const categories = [
      "Study",
      "Personal",
@@ -310,6 +318,10 @@ function Dashboard() {
           const timer = window.setTimeout(() => setModal({ task: tasks.find((task) => task.id === editId) || null }), 0);
           return () => window.clearTimeout(timer);
      }, [searchParams, tasks]);
+     useEffect(() => {
+          if (tasks.length === legacyTaskIds.size && tasks.every((task) => legacyTaskIds.has(task.id)))
+               setTasks([]);
+     }, [tasks, setTasks]);
      const stats = useMemo(
           () => ({
                total: allTasks.length,
@@ -807,7 +819,7 @@ function TaskModal({ task, onClose, onSave }) {
                                    />
                               </label>
                          </div>
-                         {error && <div className="form-error">{error}</div>}
+                              {error && <div className="form-error">{error}</div>}
                          <div className="modal-actions">
                               <button
                                    type="button"
