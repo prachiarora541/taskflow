@@ -41,7 +41,6 @@ import {
      EyeOff,
 } from "lucide-react";
 import "./App.css";
-import seedTasks from "./data/tasks.json";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import {
      clearSession,
@@ -292,7 +291,7 @@ function Navbar({ theme, setTheme }) {
 }
 
 function Dashboard() {
-     const [tasks, setTasks] = useLocalStorage("tasks", null);
+     const [tasks, setTasks] = useLocalStorage("tasks", []);
      const [searchParams] = useSearchParams();
      const [search, setSearch] = useState(searchParams.get("search") || "");
      const [filters, setFilters] = useState({
@@ -311,13 +310,6 @@ function Dashboard() {
           const timer = window.setTimeout(() => setModal({ task: tasks.find((task) => task.id === editId) || null }), 0);
           return () => window.clearTimeout(timer);
      }, [searchParams, tasks]);
-     useEffect(() => {
-          if (!tasks)
-               fetch("/src/data/tasks.json")
-                    .then((response) => response.json())
-                    .then(setTasks)
-                    .catch(() => setTasks(seedTasks));
-     }, [tasks, setTasks]);
      const stats = useMemo(
           () => ({
                total: allTasks.length,
@@ -858,7 +850,7 @@ function Page({ kicker, title, children }) {
      );
 }
 function Analytics() {
-     const [tasks] = useLocalStorage("tasks", seedTasks);
+     const [tasks] = useLocalStorage("tasks", []);
      const stats = {
           total: tasks.length,
           completed: tasks.filter((t) => t.status === "done").length,
@@ -943,7 +935,7 @@ function Chart({ title, values }) {
 }
 function Profile() {
      const [profile, setProfile] = useLocalStorage("profile", getUser());
-     const [tasks] = useLocalStorage("tasks", seedTasks);
+     const [tasks] = useLocalStorage("tasks", []);
      const [editing, setEditing] = useState(false);
      const [form, setForm] = useState(profile);
      const completed = tasks.filter((task) => task.status === "done").length;
@@ -1042,12 +1034,12 @@ function Fact({ label, value, tone = "" }) {
      );
 }
 function SettingsPage({ theme, setTheme }) {
-     const [tasks, setTasks] = useLocalStorage("tasks", seedTasks);
+     const [tasks, setTasks] = useLocalStorage("tasks", []);
      const clearCompleted = () =>
           setTasks(tasks.filter((task) => task.status !== "done"));
      const reset = () => {
-          if (window.confirm("Reset all tasks to the starter workspace?"))
-               setTasks(seedTasks);
+          if (window.confirm("Clear all tasks from this workspace?"))
+               setTasks([]);
      };
      return (
           <Page title="Settings" kicker="Workspace preferences">
@@ -1084,7 +1076,7 @@ function SettingsPage({ theme, setTheme }) {
                     <div className="setting-row danger">
                          <div>
                               <h2>Reset workspace</h2>
-                              <p>Restore the original demo tasks and start fresh.</p>
+                              <p>Remove every task and start fresh.</p>
                          </div>
                          <button className="danger-button" onClick={reset}>
                               Reset all
@@ -1096,7 +1088,7 @@ function SettingsPage({ theme, setTheme }) {
 }
 function TaskDetails() {
      const { id } = useParams();
-     const [tasks, setTasks] = useLocalStorage("tasks", seedTasks);
+     const [tasks, setTasks] = useLocalStorage("tasks", []);
      const navigate = useNavigate();
      const task = tasks.find((item) => item.id === id);
      if (!task) return <NotFound />;
