@@ -36,7 +36,6 @@ import {
      TrendingUp,
      UserCircle,
      X,
-     Zap,
      Eye,
      EyeOff,
 } from "lucide-react";
@@ -1158,9 +1157,6 @@ function AuthShell({ children, eyebrow, title, footer }) {
           <div className="auth-page">
                <div className="auth-aside">
                     <Link className="brand" to="/">
-                         <span className="brand-mark">
-                              <Zap size={18} fill="currentColor" />
-                         </span>
                          task<span>flow</span>
                     </Link>
                     <div className="auth-quote">
@@ -1370,9 +1366,6 @@ function Landing() {
           <div className="landing">
                <header className="landing-nav">
                     <Link className="brand" to="/">
-                         <span className="brand-mark">
-                              <Zap size={17} fill="currentColor" />
-                         </span>
                          task<span>flow</span>
                     </Link>
                     <button className="text-link" onClick={() => navigate(loggedIn ? "/dashboard" : "/login")}>
@@ -1453,9 +1446,6 @@ function Landing() {
 function NotFound() {
      return (
           <div className="not-found">
-               <span className="brand-mark">
-                    <Zap size={20} fill="currentColor" />
-               </span>
                <p className="overline">Lost in the workflow</p>
                <h1>404</h1>
                <p>This task seems to have disappeared.</p>
