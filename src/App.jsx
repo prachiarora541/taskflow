@@ -815,7 +815,7 @@ function TaskModal({ task, onClose, onSave }) {
                                    />
                               </label>
                          </div>
-                              {error && <div className="form-error">{error}</div>}
+                         {error && <div className="form-error">{error}</div>}
                          <div className="modal-actions">
                               <button
                                    type="button"
