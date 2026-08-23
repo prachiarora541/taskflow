@@ -192,14 +192,6 @@ function Navbar({ theme, setTheme }) {
                     >
                          <Menu size={20} />
                     </button>
-                    <Link className="brand" to="/">
-                         <span className="brand-mark">
-                              <Zap size={17} fill="currentColor" />
-                         </span>
-                         <span>
-                              task<span>flow</span>
-                         </span>
-                    </Link>
                     <nav className="main-nav">
                          <NavLink to="/">
                               <HomeIcon size={15} /> Home
