@@ -1,0 +1,76 @@
+.purchase-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 9px;
+}
+
+.quantity-control {
+  min-width: 93px;
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #dfd8cc;
+}
+
+.quantity-control button {
+  width: 27px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #645c4e;
+}
+
+.quantity-control span {
+  min-width: 15px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.add-detail {
+  min-height: 44px;
+  padding: 0 15px;
+}
+
+.detail-heart {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dfd8cc;
+  background: transparent;
+}
+
+.detail-heart:hover {
+  border-color: #b9908a;
+  color: #a24539;
+}
+
+.buy-now {
+  width: 100%;
+  min-height: 45px;
+  margin-top: 9px;
+}
+
+.service-notes {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+}
+
+.service-notes > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #726a5e;
+  font-size: 7px;
+}
+
+.service-notes svg {
+  flex: 0 0 auto;
+  color: var(--gold-dark);
+  stroke-width: 1.5;
+}

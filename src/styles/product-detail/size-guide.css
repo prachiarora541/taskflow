@@ -1,0 +1,59 @@
+.size-guide {
+  width: min(440px, calc(100% - 30px));
+  padding: 36px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.size-guide::backdrop {
+  background: rgba(28,25,20,.6);
+  backdrop-filter: blur(2px);
+}
+
+.size-guide h2 {
+  margin: 11px 0;
+  font-size: 34px;
+}
+
+.size-guide p {
+  color: #776f63;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+}
+
+.size-guide-table {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.size-guide-table > * {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  color: #766e62;
+  font-size: 10px;
+}
+
+.size-guide-table > :nth-child(-n+2) {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.size-guide-table strong {
+  color: var(--ink);
+  font-weight: 500;
+}

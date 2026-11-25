@@ -1,0 +1,17 @@
+.site-footer { padding: 65px max(8vw, calc((100vw - 1200px)/2)) 0; color: #f2eee6; background: #26231e; }
+.footer-main { display: grid; grid-template-columns: 1.45fr 1fr 1fr 1fr; gap: 42px; padding-bottom: 53px; }
+.site-footer .wordmark-copy { color: #f7f2e9; }
+.site-footer .wordmark-symbol { color: #dfc895; border-color: #b99a61; }
+.footer-brand > p { margin: 18px 0 20px; color: #aaa398; font: 13px/1.75 var(--serif); }
+.social-link { display: inline-flex; align-items: center; gap: 7px; color: #d9c28e; font-size: 9px; }
+.footer-column { display: grid; align-content: start; gap: 13px; }
+.footer-column h3 { margin: 3px 0 8px; color: #cbb88d; font-size: 8px; font-weight: 500; letter-spacing: .16em; }
+.footer-column > a, .footer-column > p, .footer-column > span { margin: 0; color: #c6c0b4; font-size: 9px; line-height: 1.7; transition: color .2s; }
+.footer-column > a:hover { color: #e4c98f; }
+.footer-address { gap: 8px; }
+.footer-bottom { min-height: 61px; display: flex; justify-content: space-between; align-items: center; gap: 14px; border-top: 1px solid #454039; color: #99948b; font-size: 8px; }
+.footer-bottom > div { display: flex; gap: 20px; }
+.footer-bottom > div a:hover { color: #e4c98f; }
+.footer-made { color: #bbb0a0; font-size: 7px; letter-spacing: .12em; }
+.footer-made span { padding-left: 5px; color: #d0b47e; font-size: 12px; }
+

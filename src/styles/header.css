@@ -1,0 +1,21 @@
+
+.announcement { height: 34px; display: flex; justify-content: center; align-items: center; gap: 17px; color: #f7f3e9; background: #28251f; font-size: 10px; letter-spacing: .065em; }
+.announcement a { display: inline-flex; align-items: center; gap: 5px; color: #dfc796; transition: color .2s; }
+.announcement a:hover { color: #fff7e7; }
+.site-header { position: sticky; z-index: 20; top: 0; min-height: 82px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 clamp(24px, 7.15vw, 114px); background: rgba(251, 249, 245, .96); border-bottom: 1px solid rgba(232, 226, 215, .75); backdrop-filter: blur(16px); }
+.wordmark { display: inline-flex; align-items: center; gap: 9px; width: fit-content; }
+.wordmark-symbol { width: 37px; height: 37px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold-dark); font: italic 26px/1 var(--serif); }
+.wordmark-copy { display: grid; gap: 1px; color: var(--ink); }
+.wordmark-copy strong { font: 500 17px/.98 var(--serif); letter-spacing: -.025em; }
+.wordmark-copy small { font-size: 7px; font-weight: 600; letter-spacing: .2em; }
+.desktop-nav { display: flex; gap: clamp(22px, 3.15vw, 48px); align-items: center; height: 100%; }
+.desktop-nav a, .header-text-link { height: 100%; display: flex; align-items: center; position: relative; color: #4d4942; font-size: 11px; letter-spacing: .025em; transition: color .2s; }
+.desktop-nav a::after { position: absolute; right: 0; bottom: 25px; left: 0; height: 1px; background: var(--gold); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.desktop-nav a:hover, .header-text-link:hover { color: var(--gold-dark); }
+.desktop-nav a:hover::after { transform: scaleX(1); }
+.header-actions { display: flex; justify-content: flex-end; align-items: center; gap: 19px; }
+.header-text-link { font-size: 11px; }
+.icon-button { position: relative; display: grid; place-items: center; width: 37px; height: 37px; border: 0; border-radius: 50%; color: var(--ink); background: transparent; transition: background .2s, color .2s; }
+.icon-button:hover { color: var(--gold-dark); background: #f1ece3; }
+.icon-count { position: absolute; top: 0; right: 0; min-width: 16px; height: 16px; padding: 0 4px; display: grid; place-items: center; border-radius: 10px; color: var(--white); background: var(--gold-dark); font-size: 9px; }
+.mobile-menu-trigger, .mobile-nav { display: none; }

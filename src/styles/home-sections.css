@@ -1,0 +1,84 @@
+
+.trust-row { min-height: 79px; padding: 17px 8vw; display: flex; justify-content: center; align-items: center; gap: clamp(25px, 6.2vw, 104px); border-bottom: 1px solid var(--line); background: #f7f4ed; }
+.trust-row > div { display: flex; align-items: center; gap: 9px; color: #5d564b; font-size: 9px; letter-spacing: .035em; white-space: nowrap; }
+.trust-row svg { color: var(--gold-dark); stroke-width: 1.5; }
+.section { max-width: 1440px; margin: auto; padding: 106px clamp(24px, 8.35vw, 134px); }
+.section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 25px; margin-bottom: 35px; }
+.section-heading .eyebrow { margin-bottom: 11px; }
+.section-heading h2 { margin-bottom: 0; font-size: clamp(35px, 4.1vw, 53px); line-height: 1.08; }
+.heading-link { margin-bottom: 8px; white-space: nowrap; }
+.collection-section { padding-bottom: 88px; }
+.collection-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.collection-card { height: clamp(230px, 29vw, 365px); position: relative; overflow: hidden; background: var(--cream); }
+.collection-card::after { position: absolute; inset: 35% 0 0; background: linear-gradient(0deg, rgba(24,22,19,.64), transparent); content: ''; }
+.collection-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.collection-card:hover img { transform: scale(1.055); }
+.collection-arrow { position: absolute; z-index: 2; top: 14px; right: 14px; width: 32px; height: 32px; display: grid; place-items: center; color: #fff; border: 1px solid rgba(255,255,255,.6); border-radius: 50%; transition: background .25s, color .25s; }
+.collection-card:hover .collection-arrow { color: var(--ink); background: #fff; }
+.collection-label { position: absolute; z-index: 2; bottom: 21px; left: 21px; display: grid; gap: 5px; color: white; }
+.collection-label small { color: #e4d9c6; font-size: 9px; }
+.collection-label strong { font: 400 24px var(--serif); }
+.arrivals-section { padding-top: 85px; padding-bottom: 112px; background: #f5f1e9; }
+.offer-band { min-height: 165px; padding: 30px max(8vw, calc((100vw - 1200px)/2)); display: grid; grid-template-columns: 42px 1fr auto; align-items: center; gap: 20px; background: #e8dfcc; }
+.offer-flower { color: var(--gold-dark); font-size: 31px; }
+.offer-band .eyebrow { font-size: 8px; }
+.offer-band h2 { margin: 5px 0 4px; font-size: clamp(24px, 3vw, 34px); }
+.offer-band h2 em { color: var(--gold-dark); }
+.offer-band p { margin: 0; color: #756c5e; font-size: 9px; }
+.offer-band p strong { color: #493d29; letter-spacing: .12em; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 17px; }
+.product-card { min-width: 0; }
+.product-image-wrap { position: relative; overflow: hidden; background: #eee8dd; }
+.product-image-link { height: 100%; display: block; overflow: hidden; aspect-ratio: .82; }
+.product-image-link img { width: 100%; height: 100%; object-fit: cover; transition: transform .65s cubic-bezier(.2,.7,.2,1); }
+.product-card:hover .product-image-link img { transform: scale(1.045); }
+.product-badge { position: absolute; top: 13px; left: 13px; padding: 6px 9px; color: #5d4a29; background: rgba(251,249,245,.92); font-size: 8px; letter-spacing: .055em; }
+.wishlist-button { position: absolute; top: 10px; right: 10px; width: 33px; height: 33px; display: grid; place-items: center; border: 0; border-radius: 50%; color: #423b31; background: rgba(251,249,245,.92); transition: color .2s, transform .2s; }
+.wishlist-button:hover { transform: scale(1.08); }
+.wishlist-button.is-saved, .detail-heart.is-saved { color: #a24539; }
+.quick-add { position: absolute; right: 0; bottom: 0; left: 0; min-height: 42px; display: flex; justify-content: center; align-items: center; gap: 7px; transform: translateY(100%); color: #fff; background: rgba(38,35,29,.91); font-size: 9px; letter-spacing: .1em; transition: transform .25s; }
+.product-card:hover .quick-add, .quick-add:focus-visible { transform: translateY(0); }
+.product-meta { display: flex; justify-content: space-between; gap: 8px; padding-top: 13px; }
+.product-meta > div:first-child { display: grid; align-content: start; gap: 5px; }
+.product-name { font: 500 15px var(--serif); transition: color .2s; }
+.product-name:hover { color: var(--gold-dark); }
+.product-category { color: #878176; font-size: 8px; letter-spacing: .025em; }
+.product-price { display: flex; flex-direction: column; align-items: flex-end; gap: 3px; color: #494238; font-size: 10px; white-space: nowrap; }
+.product-price del { color: #a49b8e; font-size: 9px; }
+.product-rating { display: flex; align-items: center; gap: 5px; margin-top: 8px; color: var(--gold-dark); font-size: 9px; }
+.product-rating span { color: #938b7e; }
+
+.story-banner { min-height: 550px; position: relative; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; color: #f7f4ed; background: #29251f; }
+.story-image { min-height: 550px; background: linear-gradient(90deg, transparent 60%, #29251f), url('https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1300&q=85') center 52%/cover no-repeat; }
+.story-content { align-self: center; padding: 60px clamp(30px, 8vw, 130px) 60px clamp(20px, 5vw, 78px); }
+.story-content .eyebrow { color: #d0b47e; }
+.story-content h2 { margin: 23px 0 18px; font-size: clamp(42px, 5.2vw, 68px); line-height: 1.03; }
+.story-content h2 em { color: #d0b47e; }
+.story-content p { max-width: 355px; margin-bottom: 25px; color: #c7c0b4; font-size: 11px; line-height: 1.9; }
+.story-edition { position: absolute; bottom: 20px; left: 35px; color: #eadfc9; font-size: 7px; letter-spacing: .18em; writing-mode: vertical-rl; }
+.bestsellers-section { padding-top: 105px; padding-bottom: 109px; }
+.promise-strip { min-height: 225px; padding: 45px max(8vw, calc((100vw - 1200px)/2)); display: grid; grid-template-columns: 55px 1fr 1fr auto; align-items: center; gap: 30px; background: #eee8da; }
+.promise-sparkle, .newsletter-sparkle { color: var(--gold); font-size: 39px; }
+.promise-strip .eyebrow { font-size: 8px; }
+.promise-strip h2 { margin: 8px 0 0; font-size: 34px; line-height: 1.13; }
+.promise-strip h2 em { color: var(--gold-dark); }
+.promise-strip > p { max-width: 375px; margin: 0; color: #696256; font-size: 10px; line-height: 1.9; }
+.promise-strip .text-link { white-space: nowrap; }
+.testimonial-section { padding: 100px 20px 107px; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.testimonial-section .eyebrow { margin-bottom: 20px; }
+.testimonial-stars { margin-bottom: 20px; font-size: 15px; }
+.testimonial-section blockquote { max-width: 760px; margin: 0 auto 25px; font: 400 clamp(23px, 3vw, 35px)/1.38 var(--serif); }
+.testimonial-author { display: flex; align-items: center; gap: 10px; color: #716b60; font-size: 7px; letter-spacing: .14em; }
+.testimonial-author i { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); }
+.newsletter { min-height: 226px; padding: 48px max(8vw, calc((100vw - 1200px)/2)); display: grid; grid-template-columns: 50px 1fr minmax(260px, 390px); align-items: center; gap: 25px; background: #eee8da; }
+.newsletter-sparkle { align-self: start; }
+.newsletter .eyebrow { font-size: 8px; }
+.newsletter h2 { margin: 7px 0 7px; font-size: 36px; }
+.newsletter p { max-width: 360px; margin: 0; color: #726b5d; font-size: 10px; line-height: 1.7; }
+.newsletter form { min-height: 51px; position: relative; display: flex; align-items: center; border-bottom: 1px solid #a8997f; }
+.newsletter input { width: 100%; min-width: 0; padding: 13px 8px 13px 0; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 10px; }
+.newsletter form > button { width: 42px; height: 40px; display: grid; flex: 0 0 42px; place-items: center; border: 0; color: #fff; background: #373127; transition: background .2s; }
+.newsletter form > button:hover { background: var(--gold-dark); }
+.newsletter form > small { position: absolute; top: calc(100% + 9px); left: 0; color: #857c6d; font-size: 8px; }
+.newsletter form > small a { text-decoration: underline; }
+.newsletter-success { display: flex; align-items: center; gap: 8px; color: #4c6244; font-size: 11px; }

@@ -1,0 +1,14 @@
+@media (max-width: 1000px) {
+  .site-header { padding-right: 4vw; padding-left: 4vw; }
+  .desktop-nav { gap: 19px; }
+  .header-actions { gap: 10px; }
+  .hero-copy { padding-left: 6vw; }
+  .section { padding-right: 6vw; padding-left: 6vw; }
+  .trust-row { gap: 28px; padding-right: 4vw; padding-left: 4vw; }
+  .product-detail-grid { gap: 38px; }
+  .cart-layout { gap: 36px; }
+  .promise-strip, .newsletter { padding-right: 6vw; padding-left: 6vw; }
+  .site-footer { padding-right: 6vw; padding-left: 6vw; }
+  .product-detail { padding-right: 6vw; padding-left: 6vw; }
+  .page-wrap { padding-right: 6vw; padding-left: 6vw; }
+}

@@ -1,0 +1,128 @@
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #716a5f;
+  font-size: 9px;
+}
+
+.detail-rating span {
+  color: var(--gold);
+  letter-spacing: .1em;
+}
+
+.detail-rating a {
+  color: #8a8174;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.detail-price {
+  margin-top: 25px;
+  color: #343027;
+  font-size: 18px;
+}
+
+.detail-price del {
+  padding-left: 8px;
+  color: #a59c8e;
+  font-size: 12px;
+}
+
+.tax-note {
+  margin: 6px 0 19px;
+  color: #847d70;
+  font-size: 8px;
+}
+
+.detail-description {
+  margin-bottom: 19px;
+  color: #716b60;
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+.detail-divider {
+  height: 1px;
+  margin: 20px 0;
+  background: var(--line);
+}
+
+.detail-spec {
+  min-height: 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #eee9e0;
+}
+
+.detail-spec span {
+  color: #898174;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+
+.detail-spec strong {
+  color: #514a3e;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.size-picker {
+  margin-top: 22px;
+}
+
+.size-label {
+  display: flex;
+  justify-content: space-between;
+  color: #524a3e;
+  font-size: 10px;
+}
+
+.size-label button {
+  padding: 0;
+  border: 0;
+  color: var(--gold-dark);
+  background: none;
+  font-size: 9px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.size-options {
+  margin-top: 11px;
+  display: flex;
+  gap: 7px;
+}
+
+.size-options button {
+  width: 36px;
+  height: 34px;
+  border: 1px solid #dfd8cc;
+  color: #5c5549;
+  background: transparent;
+  font-size: 9px;
+}
+
+.size-options button.selected {
+  border-color: var(--gold-dark);
+  color: #fff;
+  background: var(--gold-dark);
+}
+
+.detail-availability {
+  margin: 20px 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #777064;
+  font-size: 8px;
+}
+
+.stock-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #688859;
+}

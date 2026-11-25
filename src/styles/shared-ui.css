@@ -1,0 +1,11 @@
+.empty-state { min-height: 280px; padding: 48px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.empty-icon { width: 49px; height: 49px; margin-bottom: 15px; display: grid; place-items: center; border-radius: 50%; color: var(--gold-dark); background: #f1ebde; }
+.empty-state h2 { margin: 0 0 7px; font-size: 25px; }
+.empty-state p { max-width: 360px; margin-bottom: 17px; color: #847c70; font-size: 10px; line-height: 1.7; }
+.empty-state .button { min-height: 42px; }
+.toast-message { position: fixed; z-index: 50; right: 22px; bottom: 22px; min-height: 51px; padding: 10px 14px 10px 10px; display: flex; align-items: center; gap: 10px; color: #f9f5ec; background: #302c25; box-shadow: var(--shadow); font-size: 10px; animation: toast-in .25s ease both; }
+.toast-message > span { width: 25px; height: 25px; display: grid; place-items: center; border-radius: 50%; color: #302c25; background: #d6c28f; }
+.toast-message > button { width: 28px; height: 28px; margin-left: 9px; display: grid; place-items: center; border: 0; color: #e7dece; background: transparent; }
+@keyframes toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+

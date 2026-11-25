@@ -1,0 +1,24 @@
+@media (max-width: 760px) {
+  .page-wrap { padding: 24px 20px 70px; }
+  .breadcrumbs { margin-bottom: 22px; font-size: 8px; }
+  .shop-intro { padding: 5px 0 27px; }
+  .shop-intro h1, .simple-page > h1, .cart-page > h1, .checkout-page > h1, .contact-layout h1, .faq-intro h1, .policy-intro h1, .order-success h1 { font-size: 42px; }
+  .shop-intro p { max-width: 310px; margin: auto; font-size: 9px; }
+  .shop-toolbar { padding: 0 0 10px; flex-direction: column; align-items: stretch; gap: 6px; }
+  .category-tabs { min-height: 44px; gap: 20px; }
+  .category-tabs button { min-height: 43px; font-size: 8px; }
+  .shop-controls { min-height: 39px; justify-content: space-between; gap: 6px; }
+  .shop-search { min-width: 0; flex: 1; }
+  .shop-search input { width: 100%; min-width: 0; font-size: 8px; }
+  .filter-toggle { padding: 7px; font-size: 8px; }
+  .sort-select { gap: 3px; font-size: 8px; }
+  .sort-select select { max-width: 90px; font-size: 8px; }
+  .filter-panel { padding: 11px 0; flex-wrap: wrap; gap: 10px 15px; }
+  .filter-panel label { gap: 5px; font-size: 8px; }
+  .filter-panel select { min-width: 112px; max-width: 135px; padding: 7px; font-size: 8px; }
+  .filter-note { width: 100%; margin: 0; font-size: 8px; }
+  .filter-panel > .text-link { font-size: 8px; }
+  .results-count { padding: 14px 0 11px; font-size: 8px; }
+  .shop-page > .product-grid { row-gap: 26px; }
+  .shop-end-note { font-size: 8px; text-align: center; }
+}

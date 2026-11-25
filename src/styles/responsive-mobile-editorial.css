@@ -1,0 +1,24 @@
+@media (max-width: 760px) {
+  .editorial-hero { grid-template-columns: 1fr; }
+  .editorial-hero-copy { padding: 25px 23px 37px; }
+  .editorial-hero-copy .breadcrumbs { margin-bottom: 39px; }
+  .editorial-hero-copy h1 { font-size: 49px; }
+  .editorial-hero-image { min-height: 300px; }
+  .editorial-copy { padding: 65px 24px; grid-template-columns: 1fr; gap: 16px; }
+  .editorial-copy h2 { font-size: 42px; }
+  .craft-values { padding: 39px 24px; grid-template-columns: 1fr; gap: 20px; }
+  .craft-values > div { padding: 0 0 19px; border-right: 0; border-bottom: 1px solid #ddd5c7; }
+  .craft-values > div:last-child { padding-bottom: 0; }
+  .craft-values h3 { margin: 7px 0 5px; font-size: 20px; }
+  .contact-layout { padding: 5px 0; grid-template-columns: 1fr; gap: 32px; }
+  .contact-form { padding: 21px; }
+  .faq-intro { padding: 7px 0 25px; }
+  .faq-item > button { min-height: 60px; }
+  .faq-item > button > span { gap: 12px; font-size: 16px; }
+  .faq-item > p { margin-left: 29px; }
+  .faq-contact { flex-direction: column; gap: 9px; }
+  .policy-intro { padding: 7px 0 27px; }
+  .policy-intro h1 { font-size: 43px; }
+  .policy-contact { flex-wrap: wrap; }
+  .not-found { min-height: 500px; padding: 70px 18px; }
+}
